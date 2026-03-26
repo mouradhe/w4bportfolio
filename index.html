@@ -337,6 +337,58 @@
             <div class="client-logo"><img src="logo5.png" onerror="this.outerHTML='<svg class=&quot;avatar-fallback&quot; style=&quot;display:block;&quot; data-src=&quot;https://avatars.dicebear.com/api/bottts/client5.svg&quot;></svg>'" alt="Client 5"></div>
             <!-- Copy-paste the first pattern for all 32 slots -->
         </div>
+            <style>
+            /* Mobile: 98% width, single column */
+            @media (max-width: 767px) {
+              .client-img,
+              .avatar-fallback {
+                width: 98% !important;
+                max-width: 98% !important;
+              }
+              /* Force one per line */
+              .client-img {
+                flex: 0 0 98% !important;
+              }
+            }
+            
+            /* Desktop: side by side (optional) */
+            @media (min-width: 768px) {
+              .client-img,
+              .avatar-fallback {
+                width: calc(50% - 4px) !important;
+                flex: 0 0 calc(50% - 4px) !important;
+              }
+            }
+            </style>
+            <div style="
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              top: 10px;
+              width: 100%;
+              gap: 8px;
+            ">
+              <img   class="client-img"
+                src="imags/clients-1.png" 
+                alt="Client 1" 
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+              >
+              <svg class="avatar-fallback" style="display:none;"
+                   data-src="https://avatars.dicebear.com/api/avataaars/client3.svg?background=%23f8f9fa">
+              </svg>
+            
+              <img   class="client-img"
+                src="imags/clients-2.png" 
+                alt="Client 2" 
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+              >
+              <svg class="avatar-fallback" style="display:none;"
+                   data-src="https://avatars.dicebear.com/api/avataaars/client3.svg?background=%23f8f9fa">
+              </svg>
+            </div>
+
         
         <a href="#portfolio" class="cta-button">View Our Projects</a>
     </section>
